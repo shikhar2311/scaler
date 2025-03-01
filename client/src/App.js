@@ -1,4 +1,6 @@
+import EmptyChatState from './EmptyChatState'; // Import the new component
 import React, { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
 import './App.css';
 
 // Dummy list of users for the sidebar
@@ -62,7 +64,7 @@ function App() {
     setIsLoading(true);
     try {
       // This would be replaced with your actual API endpoint for fetching problem details
-      const response = await fetch(`http://localhost:3001/api/leetcode/problem/${slug}`);
+      const response = await fetch(`http://localhost:8000/api/leetcode/problem/${slug}`);
       const data = await response.json();
       
       if (data.success) {
@@ -145,7 +147,7 @@ function App() {
 
     // Call the backend to get AI response
     try {
-      const response = await fetch('http://localhost:3001/api/chat', {
+      const response = await fetch('http://localhost:8000/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -244,9 +246,7 @@ function App() {
           
           <div className="chat-window">
             {messages.length === 0 ? (
-              <div className="empty-chat">
-                <p>Enter a LeetCode problem URL or ask a coding question to start!</p>
-              </div>
+              <EmptyChatState />
             ) : (
               messages.map((message) => (
                 <div 
@@ -264,13 +264,13 @@ function App() {
                       <div className="message-avatar">ℹ️</div>
                     )}
                     <div className="message-content">
-                      <div className="message-text">
-                        {message.sender === 'assistant' ? (
-                          <div dangerouslySetInnerHTML={{ __html: message.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n\n/g, '<br/><br/>') }} />
-                        ) : (
-                          message.text
-                        )}
-                      </div>
+                    <div className="message-text">
+  {message.sender === 'assistant' ? (
+    <ReactMarkdown>{message.text}</ReactMarkdown>
+  ) : (
+    message.text
+  )}
+</div>
                       <div className="message-time">{message.time}</div>
                     </div>
                   </div>
