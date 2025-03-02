@@ -1,0 +1,146 @@
+# LeetCode Assistant Prompts - Enhancing Problem-Solving Skills
+
+## Introduction
+This document provides a curated set of prompts designed for the LeetCode Assistant application. These prompts are structured to support users in developing deeper algorithmic understanding, building independent problem-solving skills, and improving their overall coding capabilities.
+
+## Prompt Categories
+
+### 1. Problem Understanding Phase
+
+**Initial Assessment**
+- "What specific aspects of this problem are you finding challenging?"
+- "Before we dive into the solution, can you explain your understanding of the problem in your own words?"
+- "What are the key constraints in this problem that will impact our approach?"
+- "Can you identify the data structures that might be relevant for solving this problem?"
+
+**Input/Output Analysis**
+- "Let's analyze the example inputs and outputs. What patterns do you notice?"
+- "What edge cases should we consider for this problem?"
+- "If we trace through this example input manually, what steps would we follow?"
+
+### 2. Conceptual Learning
+
+**Algorithm Identification**
+- "Based on the problem description, which algorithms or techniques might be applicable here?"
+- "This problem has characteristics of [pattern]. Do you recognize how this pattern applies here?"
+- "Let's compare a greedy approach versus dynamic programming for this problem. What are the tradeoffs?"
+
+**Visualization Assistance**
+- "How would you visualize this problem? Would a tree, graph, or array representation help?"
+- "Let's sketch the data structure we'd use and trace through a simple example."
+- "Can you represent the state transitions for this problem visually?"
+
+### 3. Solution Development
+
+**Guided Approach (Scaffolding)**
+- "Let's break this down into smaller steps. First, how would you handle [specific subproblem]?"
+- "Before writing code, can you outline the high-level approach in pseudocode?"
+- "What's the first data structure you would initialize to solve this problem and why?"
+
+**Critical Thinking**
+- "What's the time and space complexity of the approach you're considering?"
+- "Is there a way to optimize this solution further? What are the bottlenecks?"
+- "Let's consider the constraints again. Does our approach handle all possible inputs efficiently?"
+
+### 4. Code Implementation
+
+**Implementation Guidance**
+- "Let's start by defining our function signature. What parameters do we need?"
+- "For this part of the algorithm, which Python/JavaScript constructs would be most appropriate?"
+- "How would you translate this logic into an elegant code implementation?"
+
+**Error Prevention**
+- "What potential bugs or edge cases should we watch out for in this implementation?"
+- "Let's trace through this code with a simple example to verify correctness."
+- "Are there any off-by-one errors we need to be careful about here?"
+
+### 5. Review & Optimization
+
+**Solution Analysis**
+- "Now that we have a working solution, let's analyze its performance. What's the runtime complexity?"
+- "Can you identify any redundant operations in our solution?"
+- "How does our approach compare to the optimal solution for this problem?"
+
+**Knowledge Transfer**
+- "What core principles from this problem could apply to other similar problems?"
+- "If we changed the constraint from [X] to [Y], how would our approach need to change?"
+- "What did you learn from solving this problem that you can apply to future challenges?"
+
+### 6. Learning Framework Prompts
+
+**Problem Pattern Recognition**
+- "This problem is an example of the [pattern] pattern. Let me explain how to recognize this pattern in future problems."
+- "Can you identify which problem-solving strategy applies best here: divide and conquer, greedy, dynamic programming, or something else?"
+
+**Conceptual Bridging**
+- "The technique we're using connects to [fundamental CS concept]. Let me help you understand how these relate."
+- "This data structure choice is important because [explanation]. Understanding when to use it will help with many problems."
+
+**Skill Development**
+- "Let's focus on improving your ability to [specific skill] through this problem."
+- "This problem offers a good opportunity to practice [specific technique]. Let's explore how to apply it effectively."
+
+## Contextual Prompts Based on Problem Difficulty
+
+### Easy Problems
+- "This is a foundational problem that teaches [core concept]. Let's make sure you understand the principles involved."
+- "While this problem has a straightforward solution, let's discuss the underlying patterns it represents."
+- "Easy problems are great for building intuition. Can you solve this without using any specialized data structures?"
+
+### Medium Problems
+- "Medium problems often require combining multiple concepts. Let's identify which concepts are at play here."
+- "This problem has several valid approaches. Let's compare a few and discuss the tradeoffs."
+- "Let's start with a naive solution and then refine it step by step to meet the efficiency requirements."
+
+### Hard Problems
+- "Hard problems typically require insights beyond the obvious. What non-obvious observations can we make about this problem?"
+- "Let's break this complex problem into smaller, more manageable subproblems."
+- "This problem may require an advanced technique. Let's discuss the intuition behind [appropriate advanced technique]."
+
+## Response Templates for Specific Problem Types
+
+### Array/String Problems
+```
+Let's approach this step by step:
+
+1. First, let's understand what we're being asked
+2. For array/string problems, it's useful to consider:
+   - Can we solve this iteratively?
+   - Would a sliding window help?
+   - Is sorting beneficial?
+3. Let's start with a simple approach and then optimize
+```
+
+### Graph Problems
+```
+Graph problems require careful thinking about:
+
+1. Representation: adjacency list vs. matrix
+2. Traversal: BFS vs. DFS
+3. Path-finding: Dijkstra's vs. Bellman-Ford vs. Floyd-Warshall
+
+Let's first determine what type of graph problem this is.
+```
+
+### Dynamic Programming Problems
+```
+For DP problems, I find this framework helpful:
+
+1. Define the state clearly
+2. Establish the recurrence relation
+3. Identify the base cases
+4. Determine the traversal order
+5. Implement with attention to efficiency
+
+Let's work through these steps together.
+```
+
+## Educational Follow-up Questions
+
+After providing guidance, these follow-up questions encourage deeper learning:
+
+- "Can you explain why this approach works in your own words?"
+- "How might you teach this algorithm to a fellow programmer?"
+- "What similar problems might use this same technique?"
+- "What did you find most challenging about implementing this solution?"
+- "If you were to solve this again, what would you do differently?"
