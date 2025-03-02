@@ -1,32 +1,15 @@
-import EmptyChatState from './EmptyChatState'; // Import the new component
+import EmptyChatState from './EmptyChatState';
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import './App.css';
 
-// Dummy list of users for the sidebar
-const dummyUsers = [
-  { id: 1, name: 'Alice', avatar: '👩‍💼' },
-  { id: 2, name: 'Bob', avatar: '👨‍💻' },
-  { id: 3, name: 'Charlie', avatar: '🧑‍🎨' },
-  { id: 4, name: 'Diana', avatar: '👩‍🔬' },
-  { id: 5, name: 'Ethan', avatar: '👨‍🚀' },
-];
-
 function App() {
-  const [selectedUser, setSelectedUser] = useState(dummyUsers[0]);
   const [messages, setMessages] = useState([]);
   const [textInput, setTextInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [problemData, setProblemData] = useState(null);
   const messagesEndRef = useRef(null);
-
-  // Switch active user
-  const handleUserSelect = (user) => {
-    setSelectedUser(user);
-    setMessages([]); // clear messages when switching users
-    setProblemData(null); // clear problem data
-  };
 
   // Auto-scroll to the bottom of the chat
   useEffect(() => {
@@ -216,29 +199,11 @@ function App() {
       </div>
       
       <div className="main-container">
-        <div className="sidebar">
-          <div className="sidebar-header">
-            <h3>Contacts</h3>
-          </div>
-          <div className="users-list">
-            {dummyUsers.map((user) => (
-              <div
-                key={user.id}
-                className={`user-item ${selectedUser.id === user.id ? 'active' : ''}`}
-                onClick={() => handleUserSelect(user)}
-              >
-                <div className="user-avatar">{user.avatar}</div>
-                <div className="user-name">{user.name}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
         <div className="chat-container">
           <div className="chat-header">
             <div className="chat-header-user">
-              <span className="user-avatar">{selectedUser.avatar}</span>
-              <h2>Chat with {selectedUser.name}</h2>
+              <div className="user-avatar">🤖</div>
+              <h2>LeetCode Guide</h2>
             </div>
           </div>
           
@@ -258,19 +223,19 @@ function App() {
                       <div className="message-avatar">🤖</div>
                     )}
                     {message.sender === 'user' && (
-                      <div className="message-avatar">{selectedUser.avatar}</div>
+                      <div className="message-avatar">👤</div>
                     )}
                     {message.sender === 'system' && (
                       <div className="message-avatar">ℹ️</div>
                     )}
                     <div className="message-content">
-                    <div className="message-text">
-  {message.sender === 'assistant' ? (
-    <ReactMarkdown>{message.text}</ReactMarkdown>
-  ) : (
-    message.text
-  )}
-</div>
+                      <div className="message-text">
+                        {message.sender === 'assistant' ? (
+                          <ReactMarkdown>{message.text}</ReactMarkdown>
+                        ) : (
+                          message.text
+                        )}
+                      </div>
                       <div className="message-time">{message.time}</div>
                     </div>
                   </div>
