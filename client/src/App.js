@@ -2,6 +2,7 @@ import EmptyChatState from './EmptyChatState';
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import './App.css';
+// import './.css';
 
 function App() {
   const [messages, setMessages] = useState([]);
