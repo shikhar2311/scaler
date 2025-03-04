@@ -123,6 +123,36 @@ Keep this context in mind when providing guidance, but remember not to provide t
   }
 });
 
+// Start server
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // Mock LeetCode API endpoint for development
 // app.get("/api/leetcode/problem/:slug", async (req, res) => {
 //   const { slug } = req.params;
@@ -176,8 +206,3 @@ Keep this context in mind when providing guidance, but remember not to provide t
 //     },
 //   });
 // });
-
-// Start server
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
